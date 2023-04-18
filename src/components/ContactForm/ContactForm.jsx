@@ -12,9 +12,7 @@ function ContactForm({onSubmit}) {
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');
     const  contacts  = useSelector((state) => state.contacts)
-   
-    
-        const dispatch = useDispatch()
+    const dispatch = useDispatch()
    
 
     const handleChangeName = e => {
@@ -30,8 +28,7 @@ function ContactForm({onSubmit}) {
 
     const handelSubmit = e => {
         e.preventDefault();
-        // onSubmit({ name, number });
-      createContact(name,number);
+        createContact(name, number);
         setName('');
         setNumber('');
        
